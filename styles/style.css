@@ -8,18 +8,18 @@
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
-a{
-  text-decoration: none;
+.logo_place_header{
+  width: 183px;
+  height: 32px;
+  position: absolute;
+  content: '';
+  top: 30px;
+  left: 64px;
+  z-index: 5;
 }
-ul{
-  padding: 0;
-}
-li{
-  list-style-type: none;
-}
-
-.logo img{
-  max-width: 100%;
+.logo_place_footer{
+  width: 183px;
+  height: 35px;
 }
 .header {
   position: relative;
@@ -30,25 +30,16 @@ li{
   background-color: #f2f2f2;
   /* выше установили ограничения для секции */
 }
-.header__logo{
-  width: 183px;
-  height: 32px;
-  position: absolute;
-  content: '';
-  top: 30px;
-  left: 64px;
-  z-index: 2;
-}
 .header__title{
   width: 730px;
   align-self: center;
-  margin-left: 64px;
+  margin: 0 0 0 64px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 700;
-  z-index: 1;
+  z-index: 5;
 }
-.header__sibtitle{
+.header__subtitle{
   position: absolute;
   content: '';
   width: 388px;
@@ -56,8 +47,11 @@ li{
   bottom: 30px;
   line-height: 25px;
   font-size: 18px;
+  font-weight: 400;
+  z-index: 5;
 }
 .header__link{
+  text-decoration: none;
   color: #2f80ed;
 }
 .header__main-illustration{
@@ -83,24 +77,26 @@ li{
   z-index: 1;
 }
 .description{
+  padding: 100px 0;
   display: flex;
 }
 .two-columns{
   display: flex;
   width: 80%;
-  min-width: 784px;
-  margin: 100px auto;
+  margin: 0px auto;
   justify-content: space-between;
 }
 .two-columns__brief{
-  flex-basis: 180px;
+  width: 175px;
   line-height: 1.2;
   font-size: 18px;
+  font-weight: 400;
   color: #2f80ed;
   margin: 0;
 }
 .two-columns__main-text{
-  flex-basis: 75%;
+  width: 80%;
+  min-width: 784px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -108,12 +104,13 @@ li{
 .two-columns__paragraph{
   line-height: 34px;
   font-size: 24px;
-  margin-bottom: 30px;
+  font-weight: 400;
+  margin: 0 0 30px;
 }
 .two-columns__paragraph:last-child{
   margin: 0;
 }
-.span-accent{
+.two-columns__span-accent{
   line-height: 34px;
   font-size: 24px;
   font-weight: 700;
@@ -148,6 +145,8 @@ li{
   flex-wrap: wrap;
   width: 1100px;
   margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
 }
 .table_theme_dark{
   z-index: 2;
@@ -168,17 +167,20 @@ li{
   line-height: 1.15;
   font-size: 24px;
   font-weight: 700;
+  margin: 0 auto;
 }
 .table__text{
-  margin-top: 20px;
+  margin: 20px auto 0;
   line-height: 1.2;
   font-size: 18px;
+  font-weight: 400;
 }
 .table__text_theme_dark{
   z-index: 2;
 }
 .feynman{
-  height: 890px;
+  padding: 100px 0 0;
+  min-height: 890px;
   position: relative;
   background-image: url(../images/feynman.png);
   background-position: bottom left;
@@ -186,7 +188,7 @@ li{
 }
 .feynman__title{
   width: 648px;
-  margin: 100px auto 0;
+  margin: 0 auto;
   text-align: center;
   line-height: 1.15;
   font-size: 120px;
@@ -207,6 +209,7 @@ li{
   line-height: 51px;
   font-size: 36px;
   color: #2f80ed;
+  text-decoration: none;
 
 }
 .kaufman{
@@ -216,6 +219,7 @@ li{
   overflow: hidden;
 }
 .kaufman__triangle{
+  background-image: url(../images/kaufman-triangle.svg);
   width: 877px;
   height: 877px;
   position: absolute;
@@ -230,6 +234,7 @@ li{
   padding: 60px 0 40px;
   min-height: 350px;
   background-color:#1f1f1f;
+  box-sizing: border-box;
 }
 .footer__columns{
   margin: 0 auto;
@@ -237,32 +242,35 @@ li{
   justify-content: space-between;
   width: 90%;
 }
-.footer__columns_content_copyright{
+
+.footer__column_content_copyright{
   flex-basis: 711px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.footer__logo{
-  width: 183px;
-  height: 35px;
-}
 .footer__author{
   margin: 18px 0;
   line-height: 25px;
   font-size: 18px;
+  font-weight: 400;
   color: #fff;
 }
 .footer__column-heading{
+  margin: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: 700;
   color: #fff;
 }
 .footer__column-links{
+  margin: 20px auto 16px;
+  padding: 0;
   line-height: 30px;
   font-size: 18px;
+  list-style-type: none;
 }
-.footer__column-links a{
+.footer__column-link{
   color: #fff;
+  text-decoration: none;
 }
