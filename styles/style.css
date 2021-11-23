@@ -45,6 +45,7 @@
   width: 388px;
   left: 64px;
   bottom: 30px;
+  margin: 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: 400;
@@ -56,14 +57,12 @@
 }
 .header__main-illustration{
   width: 765px;
+  height: 608px;
   position: absolute;
   content: '';
   right: 0;
   bottom: 0;
   z-index: 2;
-}
-.header__main-illustration img {
-  max-width: 100%;
 }
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
@@ -77,7 +76,7 @@
   z-index: 1;
 }
 .description{
-  padding: 100px 0;
+  padding: 100px 0 0;
   display: flex;
 }
 .two-columns{
@@ -182,6 +181,7 @@
   padding: 100px 0 0;
   min-height: 890px;
   position: relative;
+  background-color: #f2f2f2;
   background-image: url(../images/feynman.png);
   background-position: bottom left;
   background-repeat: no-repeat;
@@ -220,6 +220,7 @@
 }
 .kaufman__triangle{
   background-image: url(../images/kaufman-triangle.svg);
+  background-size: contain;
   width: 877px;
   height: 877px;
   position: absolute;
@@ -230,7 +231,6 @@
 }
 .footer{
   display: flex;
-  align-items: center;
   padding: 60px 0 40px;
   min-height: 350px;
   background-color:#1f1f1f;
