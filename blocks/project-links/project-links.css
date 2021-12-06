@@ -1,0 +1,6 @@
+.project-links{
+  transition: all 0.3s ease 0s;
+}
+.project-links:hover{
+  opacity: 0.5;
+}
